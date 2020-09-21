@@ -41,19 +41,92 @@ while(True):
       if current_field[move_column][move_row] == " ":
         current_field[move_column][move_row] = 'X'
         player = 2
+      elif current_field[move_column][move_row] != " ":
+        current_field[move_column][move_row - 1] = 'X'
+        player = 2
+      elif current_field[move_column][move_row - 1] != " ":
+        current_field[move_column][move_row - 2] = 'X'
+        player = 2
       else:
-        current_field[move_column][move_row] = 'X'
+        current_field[move_column][0] = 'X'
         player = 2
     elif move_column == 2:
       if current_field[move_column][move_row] == " ":
         current_field[move_column][move_row] = 'X'
         player = 2
+      elif current_field[move_column][move_row] != " ":
+        current_field[move_column][move_row - 1] = 'X'
+        player = 2
+      elif current_field[move_column][move_row - 1] != " ":
+        current_field[move_column][move_row - 2] = 'X'
+        player = 2
+      else:
+        current_field[move_column][0] = 'X'
+        player = 2
     elif move_column == 3:
       if current_field[move_column][move_row] == " ":
         current_field[move_column][move_row] = 'X'
         player = 2
+      elif current_field[move_column][move_row] != " ":
+        current_field[move_column][move_row - 1] = 'X'
+        player = 2
+      elif current_field[move_column][move_row - 1] != " ":
+        current_field[move_column][move_row - 2] = 'X'
+        player = 2
+      else:
+        current_field[move_column][0] = 'X'
+        player = 2
   else:
-    if current_field[move_column][move_row] == " ":
-      current_field[move_column][move_row] = 'O'
-      player = 1
+    if move_column == 0:
+      if current_field[move_column][move_row] == " ":
+        current_field[move_column][move_row] = 'O'
+        player = 1
+      elif current_field[move_column][move_row] != " ":
+        current_field[move_column][move_row - 1] = 'O'
+        player = 1
+      elif current_field[move_column][move_row - 1] != " ":
+        current_field[move_column][move_row - 2] = 'O'
+        player = 1
+      else:
+        current_field[move_column][0] = 'O'
+        player = 1
+    elif move_column == 1:
+      if current_field[move_column][move_row] == " ":
+        current_field[move_column][move_row] = 'O'
+        player = 1
+      elif current_field[move_column][move_row] != " ":
+        current_field[move_column][move_row - 1] = 'O'
+        player = 1
+      elif current_field[move_column][move_row - 1] != " ":
+        current_field[move_column][move_row - 2] = 'O'
+        player = 1
+      else:
+        current_field[move_column][0] = 'O'
+        player = 1
+    elif move_column == 2:
+      if current_field[move_column][move_row] == " ":
+        current_field[move_column][move_row] = 'O'
+        player = 1
+      elif current_field[move_column][move_row] != " ":
+        current_field[move_column][move_row - 1] = 'O'
+        player = 1
+      elif current_field[move_column][move_row - 1] != " ":
+        current_field[move_column][move_row - 2] = 'O'
+        player = 1
+      else:
+        current_field[move_column][0] = 'O'
+        player = 1
+    elif move_column == 3:
+      if current_field[move_column][move_row] == " ":
+        current_field[move_column][move_row] = 'O'
+        player = 1
+      elif current_field[move_column][move_row] != " ":
+        current_field[move_column][move_row - 1] = 'O'
+        player = 1
+      elif current_field[move_column][move_row - 1] != " ":
+        current_field[move_column][move_row - 2] = 'O'
+        player = 1
+      else:
+        current_field[move_column][0] = 'O'
+        player = 1
   connect4(current_field)
