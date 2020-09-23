@@ -1,23 +1,23 @@
 def connect4(field):
-  for row in range(7):
+  for row in range(11):
     if row % 2 == 0:
       practical_row = row // 2
-      for column in range(7):
+      for column in range(13):
         if column % 2 == 0:
           practical_column = column // 2
-          if column != 6:
+          if column != 12:
             print(field[practical_column][practical_row], end="")
           else:
             print(field[practical_column][practical_row])
         else:
           print("|", end="")
     else:
-      print("-------")
+      print("-------------")
 
 
 player = 1
-current_field = [[" ", " ", " ", " "], [" ", " ", " ", " "],
-                 [" ", " ", " ", " "], [" ", " ", " ", " "]]
+current_field = [[" ", " ", " ", " ", " ", " "], [" ", " ", " ", " ", " ", " "], [" ", " ", " ", " ", " ", " "], [" ", " ", " ", " ", " ", " "], [" ", " ", " ", " ", " ", " "], [" ", " ", " ", " ", " ", " "], [" ", " ", " ", " ", " ", " "]
+                 ]
 connect4(current_field)
 while(True):
   print('Players turn: ', player)
