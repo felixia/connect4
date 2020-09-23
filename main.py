@@ -23,13 +23,13 @@ while(True):
   print('Players turn: ', player)
   move_column = int(input('Please Enter the column:\n'))
   if player == 1:
-    for col in range(1, 7):
-      if current_field[move_column][-1] == " ":
-        current_field[move_column][-1] = 'X'
+    for i in range(1, 7):
+      if current_field[move_column][-i] == " ":
+        current_field[move_column][-i] = 'X'
         player = 2
   else:
-    for col in range(1, 7):
-      if current_field[move_column][-1] == " ":
-        current_field[move_column][-1] = 'O'
+    for i in range(1, 7):
+      if current_field[move_column][-i] == " ":
+        current_field[move_column][-i] = 'O'
         player = 1
   connect4(current_field)
