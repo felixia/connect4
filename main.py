@@ -27,9 +27,11 @@ while(True):
       if current_field[move_column][-i] == " ":
         current_field[move_column][-i] = 'X'
         player = 2
+        break
   else:
     for i in range(1, 7):
       if current_field[move_column][-i] == " ":
         current_field[move_column][-i] = 'O'
         player = 1
+        break
   connect4(current_field)
